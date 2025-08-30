@@ -1,0 +1,72 @@
+Design Pattern
+
+In software engineering, a design pattern is a general repeatable solution to a commonly occurring problem in software design. A design pattern isn't a finished design that can be transformed directly into code. It is a description or template for how to solve a problem that can be used in many different situations.
+
+In addition, patterns allow developers to communicate using well-known, well understood names for software interactions. Common design patterns can be improved over time, making them more robust than ad-hoc designs.
+
+1 Creational                   2 structural  (proxy,)                 3 Behavioral(observer)
+
+1 :Creational design patterns
+These design patterns are all about class instantiation. This pattern can be further divided into class-creation patterns and object-creational patterns. While class-creation patterns use inheritance effectively in the instantiation process, object-creation patterns use delegation effectively to get the job done.
+
+a>> Abstract factory
+Creates an instance of several families of classs
+
+b>>   Builder
+Separates object construction from its representation
+
+c>>> Factory 
+Creates an instance of several derived classes
+
+d>>> Object pool
+Avoid expensive acquisition and release of resources by recycling objects that are no longer in use
+
+e>>> prototype
+A fully initialized instance to be copied or cloned
+
+f>>> Singleton
+A class of which only a single instance can exist
+
+**Singleton
+Abstract Factory
+Factory
+Object Pool**
+
+Object Pool
+Object pooling can offer a significant performance boost; it is most effective in situations where the cost of initializing a class instance is high, the rate of instantiation of a class is high, and the number of instantiations in use at any one time is low.
+
+Object pool pattern is a software creational design pattern which is used in situations where the cost of initializing a class instance is very high.
+Basically, an Object pool is a container which contains some amount of objects. So, when an object is taken from the pool, it is not available in the pool until it is put back.
+Objects in the pool have a lifecycle:
+
+Creation
+Validation
+Destroy.
+
+----------------
+2:Structura----->These design patterns are about organizing different classes and objects to form larger structures and provide new functionality. 
+a) Proxy:
+Proxy is a structural design pattern that lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.
+Solution:
+The proxy disguises itself as a database object. It can handle lazy initialization and result caching without the client or the real database object even knowing.
+\
+Example: A credit card is a proxy for a bank account, which is a proxy for a bundle of cash.
+----------------
+PRIOR to proxy : direct coupling , lots of start up and shut down overhead.
+Lazy Initializer : On first request of client we initialize the object 
+
+Initialization on first use
+
+    Design an "extra level of indirection" wrapper class
+    The wrapper class holds a pointer to the real class
+    The pointer is initialized to null
+    When a request comes in, the real object is created "on first use" (aka lazy initialization)
+    The request is always delegated
+
+Proxy means �in place of�, representing� or �in place of� or �on behalf of� are literal meanings of proxy and that directly explains Proxy Design Pattern.
+Proxies are also called surrogates, handles, and wrappers.
+
+
+========================================
+OOD :: with class diagram 
+
